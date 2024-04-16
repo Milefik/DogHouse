@@ -1,0 +1,390 @@
+@font-face {
+  font-family: Baloo2;
+  src: url(../fonts/Baloo2-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Foo;
+  src: url(../fonts/foo.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1920 * 10);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  background-color: #61b24a;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bg1-cont {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg1 {
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  background-image: url(../img/Back5.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  z-index: -1;
+  transition: all 0.1s ease;
+}
+
+@media (max-width: 970px) {
+  .bg1 {
+    width: 110%;
+    height: 110%;
+  }
+}
+
+@media (max-width: 500px) {
+  .bg1 {
+    width: 118%;
+    width: 118%;
+  }
+}
+
+.bg2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/Back2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  padding: 5.2rem 0 6.4rem 0;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.logo {
+  width: 111rem;
+  animation: 4s spinner linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(-0deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.phone-container {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: absolute;
+  transform: rotate(12deg);
+  top: -7rem;
+}
+
+.phone {
+  position: absolute;
+  width: 29.1rem;
+}
+
+video {
+  width: 26.5rem;
+}
+
+.video {
+  border-radius: 4.5rem;
+  overflow: hidden;
+}
+
+.title {
+  position: absolute;
+  top: 36.4rem;
+}
+
+.text {
+  font-family: Foo;
+  font-weight: 400;
+  font-size: 8.8rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 4.8rem 8rem rgba(26, 26, 26, 0.8),
+    0.4rem 0.4rem 3.2rem rgba(48, 30, 30, 0.3);
+  -webkit-text-stroke: 0.5rem #f75900;
+}
+
+.yellow {
+  color: #fff10f;
+  position: absolute;
+  left: 7.2rem;
+  top: 7.2rem;
+}
+
+.rays {
+  position: absolute;
+  width: 100.8rem;
+  left: 0;
+  right: 0;
+  bottom: -38rem;
+  margin: 0 auto;
+  z-index: -1;
+  animation: 10s spin linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button {
+  font-family: Baloo2;
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 55%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #602606;
+  border: 0.4rem solid #fcf8ba;
+  border-radius: 6rem;
+  padding: 1.2rem 1.6rem;
+  width: 44.8rem;
+  height: 10.4rem;
+  box-shadow: 0 0.8rem 1.6rem 0 rgba(26, 26, 26, 0.5), 0 0 48px 0 #7cb941;
+  background: #fff10f;
+  margin-top: 58.8rem;
+  cursor: pointer;
+  animation: 1s scale linear infinite alternate;
+}
+
+.button:hover {
+  box-shadow: 0 0.8rem 4rem 0 rgba(26, 26, 26, 0.5), 0 0 6.4rem 0 #7cb941;
+  background: #fff54b;
+  transition: all 200ms ease;
+  transform: scale(1.05);
+  animation: 1s scale1 linear infinite alternate;
+}
+
+.button:active {
+  box-shadow: 0 0.8rem 0.8rem 0 rgba(26, 26, 26, 0.5), 0 0 3.2rem 0 #7cb941;
+  background: #ecdf14;
+  transition: all 200ms ease;
+  transform: scale(1);
+  animation: 1s scale linear infinite alternate;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes scale1 {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dog-cont {
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Left-dog {
+  position: absolute;
+  width: 36.8rem;
+  left: 0;
+  bottom: 3.2rem;
+  z-index: -1;
+  animation: 4s float linear infinite;
+}
+
+.Right-dog {
+  position: absolute;
+  width: 36rem;
+  right: 0;
+  bottom: 3.2rem;
+  z-index: -1;
+  animation: 4s float linear infinite -2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate3d(0, -2%, 0);
+  }
+  50% {
+    transform: translate3d(0, 2%, 0);
+  }
+  100% {
+    transform: translate3d(0, -2%, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: calc(100vw / 390 * 10);
+  }
+
+  .bg2 {
+    background-position: right;
+  }
+
+  .container {
+    padding: 0.8rem 0 4.8rem 0;
+  }
+
+  .phone-container {
+    top: -1.6rem;
+    transform: rotate(11deg);
+  }
+
+  .phone {
+    width: 18.7rem;
+  }
+
+  video {
+    width: 17rem;
+  }
+
+  .video {
+    border-radius: 3rem;
+  }
+
+  .title {
+    top: 25.9rem;
+    z-index: 1;
+  }
+
+  .text {
+    font-size: 4.4rem;
+    -webkit-text-stroke: 0;
+    background: linear-gradient(180deg, #fff 0%, #e3aa82 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+  }
+
+  .text::before {
+    content: attr(data-text);
+    -webkit-text-stroke: 0.8rem #f75900;
+    position: absolute;
+    z-index: -1;
+    text-shadow: 0 4.8rem 8rem rgba(26, 26, 26, 0.8),
+      0.4rem 0.4rem 3.2rem rgba(48, 30, 30, 0.3);
+  }
+
+  .yellow {
+    background: linear-gradient(180deg, #fffe0e 0%, #ffca0e 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: 3.7rem;
+    top: 4.3rem;
+  }
+
+  .rays {
+    width: 40rem;
+    bottom: -40rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rays img {
+    width: 70rem;
+  }
+
+  .button {
+    font-size: 2.4rem;
+    padding: 1.2rem 1.6rem;
+    width: 26.2rem;
+    height: 6.4rem;
+    margin-top: 47.6rem;
+  }
+
+  .button:hover {
+    box-shadow: 0 0.8rem 1.6rem 0 rgba(26, 26, 26, 0.5), 0 0 48px 0 #7cb941;
+    background: #fff10f;
+    transition: none;
+    transform: none;
+    animation: none;
+  }
+
+  .Left-dog {
+    width: 13.3rem;
+    bottom: 5.6rem;
+  }
+
+  .Right-dog {
+    width: 14.6rem;
+    right: -3.7rem;
+    bottom: 4.8rem;
+  }
+}
